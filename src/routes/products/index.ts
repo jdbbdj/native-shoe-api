@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction, Router } from "express";
+import express, { Router } from "express";
 import {
   getProducts,
   getProductsByID,
@@ -9,7 +9,7 @@ const router: Router = express.Router();
 
 router.get("/", getProducts);
 
-router.put("/:id", getProductsByID);
+router.get("/:id", getProductsByID);
 
 router.get("/shoe/", getProductsBySize);
 

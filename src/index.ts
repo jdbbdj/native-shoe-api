@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import dotenv from "dotenv";
-import commentRouter from "./routes/comments/index";
+import commentRouter from "./routes/products/index";
 import Connect from "./database/connect";
 
 dotenv.config();
