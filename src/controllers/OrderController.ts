@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { Product } from "../models/Product";
+import { Order } from "../models/Order";
 
 export const getProducts = async (req: Request, res: Response) => {
   try {
     let products;
-    products = await Product.find();
+    products = await Order.find();
     res.status(200).send({ data: products });
   } catch (err) {
     res.status(500).json(err);
@@ -14,7 +14,7 @@ export const getProducts = async (req: Request, res: Response) => {
 export const getProductsByID = async (req: Request, res: Response) => {
   try {
     let product;
-    product = await Product.findById(req.params.id);
+    product = await Order.findById(req.params.id);
     res.status(200).send({ data: product });
   } catch (err) {
     res.status(500).json(err);
